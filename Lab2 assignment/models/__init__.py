@@ -9,10 +9,13 @@ here and nothing else changes.
 import torch.nn as nn
 
 from .lenet import LeNet5
+from .alexnet import AlexNet
+from .vgg16 import VGG16
 
-# AlexNet and VGG16 are added in later stages.
 _REGISTRY = {
     "lenet5": LeNet5,
+    "alexnet": AlexNet,
+    "vgg16": VGG16,
 }
 
 
