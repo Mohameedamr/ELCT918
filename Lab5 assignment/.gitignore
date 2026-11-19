@@ -1,0 +1,30 @@
+# ELCT918 Lab 5 -- files that are regenerated and should not be committed.
+# The vec/*.hex vectors ARE committed on purpose, so the testbench can be run
+# without installing Python.
+
+# ModelSim / Questa
+work/
+transcript
+vsim.wlf
+vsim_stacktrace.vstf
+modelsim.ini
+
+# Vivado
+*.jou
+*.log
+*.pb
+*.wdb
+*.str
+*.dcp
+.Xil/
+xsim.dir/
+reports/
+vivado_pid*.str
+
+# Simulation output
+*.vcd
+*.saif
+
+# Python
+__pycache__/
+*.pyc
