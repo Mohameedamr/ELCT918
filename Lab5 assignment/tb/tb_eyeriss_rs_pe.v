@@ -70,7 +70,13 @@ module tb_eyeriss_rs_pe;
     wire [4:0]           psum_k;
     wire signed [DW-1:0] psum_out;
 
+    // Synthesis resolves parameters away, so the implemented netlist has none.
+    // Compile with -d GATE_SIM when running against netlist_funcsim.v.
+`ifdef GATE_SIM
+    eyeriss_rs_pe dut (
+`else
     eyeriss_rs_pe #(.DW(DW)) dut (
+`endif
         .clk        (clk),
         .rst_n      (rst_n),
         .cfg_s      (cfg_s),
